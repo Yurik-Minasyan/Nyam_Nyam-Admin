@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Nyam_NyamAdmin"
         tools:targetApi="31">
         <activity
+            android:name=".Table2"
+            android:exported="false" />
+        <activity
             android:name=".Table1"
             android:exported="false" />
         <activity

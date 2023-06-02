@@ -74,11 +74,12 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/table2"
+            android:id="@+id/table_2"
             android:layout_width="100dp"
             android:layout_marginRight="50dp"
             android:layout_height="100dp"
             android:layout_gravity="end"
+            android:onClick="table2"
             android:backgroundTint="#808080"
             android:text="2"
             android:textSize="40dp"

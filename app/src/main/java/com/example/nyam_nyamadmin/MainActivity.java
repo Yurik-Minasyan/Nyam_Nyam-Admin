@@ -39,12 +39,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         table=findViewById(R.id.table);
         table1 = findViewById(R.id.table1);
-        table2 = findViewById(R.id.table2);
+        table2 = findViewById(R.id.table_2);
         table3 = findViewById(R.id.table3);
         table4 = findViewById(R.id.table4);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         Firestore = FirebaseFirestore.getInstance();
-        Firestore.collection("Order").document("ZLIfAvO1DJN16r4AiFLi").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+        Firestore.collection("Order").document("hVCaVCXIMWVIR1ogF0Ij").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 String table = documentSnapshot.getString("Table");
@@ -74,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, Table1.class);
         startActivity(i);
     }
+    public void table2(View view){
+        Intent i = new Intent(MainActivity.this, Table2.class);
+        startActivity(i);
+    }
+
     public void translate_rus(View view) {
         ImageButton cart_USA2=findViewById(R.id.translate_usa);
         ImageButton cart_rus2=findViewById(R.id.translate_rus);
