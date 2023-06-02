@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,13 +40,21 @@ public class MainActivity extends AppCompatActivity {
         table4 = findViewById(R.id.table4);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         Firestore = FirebaseFirestore.getInstance();
-        Firestore.collection("Order").document("dMGM3or0ycKo2UUkJ4tD").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+        Firestore.collection("Order").document("ZLIfAvO1DJN16r4AiFLi").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 String table = documentSnapshot.getString("Table");
-                String total = documentSnapshot.getString("Total");
-                if (Integer.parseInt(table) == 0){
+                if (Integer.parseInt(table) == 1){
                     table1.setBackgroundColor(getResources().getColor(R.color.green));
+                }
+                if (Integer.parseInt(table) == 2){
+                    table2.setBackgroundColor(getResources().getColor(R.color.green));
+                }
+                if (Integer.parseInt(table) == 3){
+                    table3.setBackgroundColor(getResources().getColor(R.color.green));
+                }
+                if (Integer.parseInt(table) == 4){
+                    table4.setBackgroundColor(getResources().getColor(R.color.green));
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -54,5 +64,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 //        table1.setBackgroundColor(getResources().getColor(R.color.green));
+    }
+
+    public void table1(View view){
+        Intent i = new Intent(MainActivity.this, Table1.class);
+        startActivity(i);
     }
 }
