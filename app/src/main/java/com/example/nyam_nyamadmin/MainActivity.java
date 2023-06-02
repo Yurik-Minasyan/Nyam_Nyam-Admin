@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     TextView table;
@@ -70,4 +74,33 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, Table1.class);
         startActivity(i);
     }
+    public void translate_rus(View view) {
+        ImageButton cart_USA2=findViewById(R.id.translate_usa);
+        ImageButton cart_rus2=findViewById(R.id.translate_rus);
+        Locale locale = new Locale("ru");
+        Locale.setDefault(locale);
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+        recreate();
+        cart_rus2.setVisibility(View.GONE);
+        cart_USA2.setVisibility(View.VISIBLE);
+    }
+    public void translate_usa(View view) {
+        ImageButton cart_USA=findViewById(R.id.translate_usa);
+        ImageButton cart_rus=findViewById(R.id.translate_rus);
+        Locale locale = new Locale("en");
+        Locale.setDefault(locale);
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+
+        recreate();
+        cart_rus.setVisibility(View.VISIBLE);
+        cart_USA.setVisibility(View.GONE);
+    }
+
+
 }

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Nyam_Nyam Admin</string>
+    <string name="tables">Столы</string>
+    <string name="table1" translatable="false">Стол 1</string>
+    <string name="total" translatable="false">Итог</string>
+    <string name="burger" translatable="false">Бургер из говядины</string>
+    <string name="hot_dog" translatable="false">Хот-дог</string>
+    <string name="french_fries" translatable="false">картофель фри</string>
+    <string name="vegetable" translatable="false">Овощной салат</string>
+    <string name="caesar" translatable="false">Цезарь</string>
+    <string name="caprese" translatable="false">Капрезе</string>
+    <string name="latte" translatable="false">Латте</string>
+    <string name="cappuchino" translatable="false">Капучино</string>
+    <string name="arabia" translatable="false">Кофе Арабия</string>
+    <string name="donut" translatable="false">Пончик</string>
+    <string name="napoleon" translatable="false">Наполеон</string>
+    <string name="mikado" translatable="false">Микадо</string>
+    <string name="marinade" translatable="false">Маринад</string>
+    <string name="cheese" translatable="false">Сыры</string>
+    <string name="meat" translatable="false">Мясная закуска</string>
+    <string name="water" translatable="false">Вода</string>
+    <string name="sprite" translatable="false">Sprite</string>
+    <string name="fanta" translatable="false">Fanta</string>
+    <string name="coca" translatable="false">Coca-cola</string>
+    <string name="print" translatable="false">Устройство не подключено</string>
+</resources>

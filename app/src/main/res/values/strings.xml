@@ -1,4 +1,26 @@
 <resources>
     <string name="app_name">Nyam_Nyam Admin</string>
     <string name="tables">Tables</string>
+    <string name="table1" translatable="false">Table 1</string>
+    <string name="total" translatable="false">Total</string>
+    <string name="burger" translatable="false">Beef burger</string>
+    <string name="hot_dog" translatable="false">Hot dog</string>
+    <string name="french_fries" translatable="false">French fries</string>
+    <string name="vegetable" translatable="false">Vegetable salad</string>
+    <string name="caesar" translatable="false">Caesar</string>
+    <string name="caprese" translatable="false">Caprese</string>
+    <string name="latte" translatable="false">Latte</string>
+    <string name="cappuchino" translatable="false">Cappuccino</string>
+    <string name="arabia" translatable="false">Arabia Coffee</string>
+    <string name="donut" translatable="false">Donut</string>
+    <string name="napoleon" translatable="false">Napoleon</string>
+    <string name="mikado" translatable="false">Mikado</string>
+    <string name="marinade" translatable="false">Marinade</string>
+    <string name="cheese" translatable="false">Cheese</string>
+    <string name="meat" translatable="false">Meat Snack</string>
+    <string name="water" translatable="false">Water</string>
+    <string name="sprite" translatable="false">Sprite</string>
+    <string name="fanta" translatable="false">Fanta</string>
+    <string name="coca" translatable="false">Coca-cola</string>
+    <string name="print" translatable="false">No device connected</string>
 </resources>
