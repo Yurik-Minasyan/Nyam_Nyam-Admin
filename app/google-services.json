@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "117213687417",
+    "firebase_url": "https://nyam-nyam-ccff4-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "nyam-nyam-ccff4",
+    "storage_bucket": "nyam-nyam-ccff4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117213687417:android:213443b6d8de56cfa76ea8",
+        "android_client_info": {
+          "package_name": "com.example.nyam_nyam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaL963XFCH5JzhOujN4xUi1UON5vsY9ps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117213687417:android:0c00e2b41d3b557aa76ea8",
+        "android_client_info": {
+          "package_name": "com.example.nyam_nyamadmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaL963XFCH5JzhOujN4xUi1UON5vsY9ps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
