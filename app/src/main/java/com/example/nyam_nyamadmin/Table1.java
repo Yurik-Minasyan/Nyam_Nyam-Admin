@@ -39,6 +39,7 @@ public class Table1 extends AppCompatActivity {
     TextView fanta_n;
     TextView sprite_n;
     TextView water_n;
+    TextView sum_n;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,7 @@ public class Table1 extends AppCompatActivity {
         fanta_n = findViewById(R.id.fanta_tt);
         sprite_n = findViewById(R.id.sprite_tt);
         water_n = findViewById(R.id.water_tt);
+        sum_n = findViewById(R.id.sum_tt);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         Firestore = FirebaseFirestore.getInstance();
         Firestore.collection("Order").document("KO8wyP48r8CC7MflFngR").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -87,6 +89,7 @@ public class Table1 extends AppCompatActivity {
                 String fanta = documentSnapshot.getString("Fanta");
                 String sprite = documentSnapshot.getString("Sprite");
                 String water = documentSnapshot.getString("Water");
+                String sum = documentSnapshot.getString("Total");
                 if (Integer.parseInt(meat) != 0){
                     meat_n.setText("Meat Snack---" + Integer.parseInt(meat)+"---"+Integer.parseInt(meat)*3000+"amd");
                     meat_n.setVisibility(View.VISIBLE);
@@ -161,6 +164,10 @@ public class Table1 extends AppCompatActivity {
                 }
                 if (Integer.parseInt(water) != 0){
                     water_n.setText("Water---" + Integer.parseInt(water)+"---"+Integer.parseInt(water)*300+"amd");
+                    water_n.setVisibility(View.VISIBLE);
+                }
+                if (Integer.parseInt(sum) != 0){
+                    water_n.setText("Total---" + Integer.parseInt(sum) + "amd");
                     water_n.setVisibility(View.VISIBLE);
                 }
             }
