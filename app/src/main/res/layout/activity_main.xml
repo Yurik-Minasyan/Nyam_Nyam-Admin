@@ -89,7 +89,7 @@
         android:layout_height="200dp"
         android:layout_gravity="end"
         android:background="@drawable/logo2"
-        android:backgroundTint="#808080"
+
         android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
