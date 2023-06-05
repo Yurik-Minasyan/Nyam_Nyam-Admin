@@ -3,6 +3,7 @@
     <string name="tables">Tables</string>
     <string name="table1" translatable="false">Table 1</string>
     <string name="table2" translatable="false">Table 2</string>
+    <string name="table3" translatable="false">Table 3</string>
     <string name="total" translatable="false">Total</string>
     <string name="burger" translatable="false">Beef burger</string>
     <string name="hot_dog" translatable="false">Hot dog</string>

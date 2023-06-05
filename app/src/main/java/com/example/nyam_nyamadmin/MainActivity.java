@@ -44,27 +44,48 @@ public class MainActivity extends AppCompatActivity {
         table4 = findViewById(R.id.table4);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         Firestore = FirebaseFirestore.getInstance();
-        Firestore.collection("Order").document("hVCaVCXIMWVIR1ogF0Ij").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+        Firestore.collection("Order").document("Table1").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                String table = documentSnapshot.getString("Table");
-                if (Integer.parseInt(table) == 1){
-                    table1.setBackgroundColor(getResources().getColor(R.color.green));
-                }
-                if (Integer.parseInt(table) == 2){
-                    table2.setBackgroundColor(getResources().getColor(R.color.green));
-                }
-                if (Integer.parseInt(table) == 3){
-                    table3.setBackgroundColor(getResources().getColor(R.color.green));
-                }
-                if (Integer.parseInt(table) == 4){
-                    table4.setBackgroundColor(getResources().getColor(R.color.green));
-                }
+                table1.setBackgroundColor(getResources().getColor(R.color.green));
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(MainActivity.this,"Fail",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this,e.getMessage(),Toast.LENGTH_LONG).show();
+            }
+        });
+        Firestore.collection("Order").document("Table2").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                table2.setBackgroundColor(getResources().getColor(R.color.green));
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(MainActivity.this,e.getMessage(),Toast.LENGTH_LONG).show();
+            }
+        });
+        Firestore.collection("Order").document("Table3").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                table3.setBackgroundColor(getResources().getColor(R.color.green));
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(MainActivity.this,e.getMessage(),Toast.LENGTH_LONG).show();
+            }
+        });
+        Firestore.collection("Order").document("Table4").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                table4.setBackgroundColor(getResources().getColor(R.color.green));
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(MainActivity.this,e.getMessage(),Toast.LENGTH_LONG).show();
             }
         });
 //        table1.setBackgroundColor(getResources().getColor(R.color.green));
@@ -76,6 +97,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void table2(View view){
         Intent i = new Intent(MainActivity.this, Table2.class);
+        startActivity(i);
+    }
+    public void table3(View view){
+        Intent i = new Intent(MainActivity.this, Table3.class);
         startActivity(i);
     }
 

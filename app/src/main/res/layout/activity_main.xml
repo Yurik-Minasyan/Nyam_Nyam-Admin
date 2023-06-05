@@ -103,6 +103,7 @@
             android:layout_marginLeft="50dp"
             android:backgroundTint="#808080"
             android:text="3"
+            android:onClick="table3"
             android:textSize="40dp"
             app:layout_constraintStart_toStartOf="parent" />
 

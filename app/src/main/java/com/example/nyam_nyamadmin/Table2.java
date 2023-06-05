@@ -110,7 +110,7 @@ public class Table2 extends AppCompatActivity {
         sum_n2_t2 = findViewById(R.id.sum_tt2_t2);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         Firestore = FirebaseFirestore.getInstance();
-        Firestore.collection("Order").document("hVCaVCXIMWVIR1ogF0Ij").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+        Firestore.collection("Order").document("Table2").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 String meat_t2 = documentSnapshot.getString("Meat Snack");
