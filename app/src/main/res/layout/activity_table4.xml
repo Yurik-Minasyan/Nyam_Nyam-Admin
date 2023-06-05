@@ -23,7 +23,7 @@
         android:id="@+id/table4_t4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/table4 v"
+        android:text="@string/table4"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="50dp"
