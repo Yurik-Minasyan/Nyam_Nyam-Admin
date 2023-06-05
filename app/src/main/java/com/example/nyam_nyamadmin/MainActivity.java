@@ -103,6 +103,10 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, Table3.class);
         startActivity(i);
     }
+    public void table4(View view){
+        Intent i = new Intent(MainActivity.this, Table4.class);
+        startActivity(i);
+    }
 
     public void translate_rus(View view) {
         ImageButton cart_USA2=findViewById(R.id.translate_usa);

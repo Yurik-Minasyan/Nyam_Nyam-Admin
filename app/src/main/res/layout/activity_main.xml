@@ -115,6 +115,7 @@
             android:layout_marginRight="50dp"
             android:backgroundTint="#808080"
             android:text="4"
+            android:onClick="table4"
             android:textSize="40dp"
             app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>

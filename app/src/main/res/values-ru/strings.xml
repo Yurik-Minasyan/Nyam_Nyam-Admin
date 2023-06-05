@@ -4,6 +4,7 @@
     <string name="table1" translatable="false">Стол 1</string>
     <string name="table2" translatable="false">Стол 2</string>
     <string name="table3" translatable="false">Стол 3</string>
+    <string name="table4" translatable="false">Стол 4</string>
     <string name="total" translatable="false">Итог</string>
     <string name="burger" translatable="false">Бургер из говядины</string>
     <string name="hot_dog" translatable="false">Хот-дог</string>
