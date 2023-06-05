@@ -13,15 +13,16 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Locale;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     TextView table;
@@ -44,10 +45,22 @@ public class MainActivity extends AppCompatActivity {
         table4 = findViewById(R.id.table4);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         Firestore = FirebaseFirestore.getInstance();
-        Firestore.collection("Order").document("Table1").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+
+        Firestore.collection("Order").document("Table1").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                table1.setBackgroundColor(getResources().getColor(R.color.green));
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()){
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        Map<String, Object> map = document.getData();
+                        if (!map.isEmpty()){
+                            table1.setBackgroundColor(getResources().getColor(R.color.green));
+                        }
+                        else{
+                            table1.setBackgroundColor(getResources().getColor(R.color.grey));
+                        }
+                    }
+                }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -55,10 +68,21 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,e.getMessage(),Toast.LENGTH_LONG).show();
             }
         });
-        Firestore.collection("Order").document("Table2").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+        Firestore.collection("Order").document("Table2").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                table2.setBackgroundColor(getResources().getColor(R.color.green));
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()){
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        Map<String, Object> map = document.getData();
+                        if (!map.isEmpty()){
+                            table2.setBackgroundColor(getResources().getColor(R.color.green));
+                        }
+                        else{
+                            table2.setBackgroundColor(getResources().getColor(R.color.grey));
+                        }
+                    }
+                }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -66,10 +90,21 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,e.getMessage(),Toast.LENGTH_LONG).show();
             }
         });
-        Firestore.collection("Order").document("Table3").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+        Firestore.collection("Order").document("Table3").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                table3.setBackgroundColor(getResources().getColor(R.color.green));
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()){
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        Map<String, Object> map = document.getData();
+                        if (!map.isEmpty()){
+                            table3.setBackgroundColor(getResources().getColor(R.color.green));
+                        }
+                        else{
+                            table3.setBackgroundColor(getResources().getColor(R.color.grey));
+                        }
+                    }
+                }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -77,10 +112,21 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,e.getMessage(),Toast.LENGTH_LONG).show();
             }
         });
-        Firestore.collection("Order").document("Table4").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+        Firestore.collection("Order").document("Table4").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                table4.setBackgroundColor(getResources().getColor(R.color.green));
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()){
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        Map<String, Object> map = document.getData();
+                        if (!map.isEmpty()){
+                            table4.setBackgroundColor(getResources().getColor(R.color.green));
+                        }
+                        else{
+                            table4.setBackgroundColor(getResources().getColor(R.color.grey));
+                        }
+                    }
+                }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -88,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,e.getMessage(),Toast.LENGTH_LONG).show();
             }
         });
+
 //        table1.setBackgroundColor(getResources().getColor(R.color.green));
     }
 
