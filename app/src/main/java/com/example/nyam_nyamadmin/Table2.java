@@ -226,6 +226,7 @@ public class Table2 extends AppCompatActivity {
                     cola_n_t2.setText(R.string.coca);
                     cola_n2_t2.setText(" "+  Integer.parseInt(cola_t2)+"---"+Integer.parseInt(cola_t2)*500+"amd");
                     cola_n_t2.setVisibility(View.VISIBLE);
+                    cola_n2_t2.setVisibility(View.VISIBLE);
                 }
                 if (Integer.parseInt(fanta_t2) != 0){
                     fanta_n_t2.setText(R.string.fanta);
