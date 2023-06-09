@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.nyam_nyamadmin'
+    namespace 'com.EMenu.nyam_nyamadmin'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.nyam_nyamadmin"
+        applicationId "com.EMenu.nyam_nyamadmin"
         minSdk 24
         targetSdk 33
         versionCode 1

@@ -1,4 +1,4 @@
-package com.example.nyam_nyamadmin;
+package com.EMenu.nyam_nyamadmin;
 
 import org.junit.Test;
 
